@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B5BC44DD-1870-4732-9325-37279F2437EF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CalisanYonetimSistemi</RootNamespace>
+    <AssemblyName>CalisanYonetimSistemi</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icons8-user-64.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CalisanYonetimDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CalisanYonetimDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Calisan\CalisanEkleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calisan\CalisanEkleForm.Designer.cs">
+      <DependentUpon>CalisanEkleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calisan\CalisanGuncelleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calisan\CalisanGuncelleForm.Designer.cs">
+      <DependentUpon>CalisanGuncelleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calisan\CalisanListeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calisan\CalisanListeForm.Designer.cs">
+      <DependentUpon>CalisanListeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Calisan\CalisanSilForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Calisan\CalisanSilForm.Designer.cs">
+      <DependentUpon>CalisanSilForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Yonetici\YoneticiEkleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yonetici\YoneticiEkleForm.Designer.cs">
+      <DependentUpon>YoneticiEkleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetici\YoneticiGuncelleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yonetici\YoneticiGuncelleForm.Designer.cs">
+      <DependentUpon>YoneticiGuncelleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetici\YoneticiListeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yonetici\YoneticiListeForm.Designer.cs">
+      <DependentUpon>YoneticiListeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yonetici\YoneticiSilForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yonetici\YoneticiSilForm.Designer.cs">
+      <DependentUpon>YoneticiSilForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YonetimPaneli.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YonetimPaneli.Designer.cs">
+      <DependentUpon>YonetimPaneli.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Calisan\CalisanEkleForm.resx">
+      <DependentUpon>CalisanEkleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calisan\CalisanGuncelleForm.resx">
+      <DependentUpon>CalisanGuncelleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calisan\CalisanListeForm.resx">
+      <DependentUpon>CalisanListeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calisan\CalisanSilForm.resx">
+      <DependentUpon>CalisanSilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Yonetici\YoneticiEkleForm.resx">
+      <DependentUpon>YoneticiEkleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yonetici\YoneticiGuncelleForm.resx">
+      <DependentUpon>YoneticiGuncelleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yonetici\YoneticiListeForm.resx">
+      <DependentUpon>YoneticiListeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yonetici\YoneticiSilForm.resx">
+      <DependentUpon>YoneticiSilForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YonetimPaneli.resx">
+      <DependentUpon>YonetimPaneli.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CalisanYonetimDataSet.xsc">
+      <DependentUpon>CalisanYonetimDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CalisanYonetimDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CalisanYonetimDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CalisanYonetimDataSet.xss">
+      <DependentUpon>CalisanYonetimDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons8-user-64.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
